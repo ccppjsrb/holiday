@@ -110,6 +110,12 @@ class Holiday:
 			if 1989 <= year:
 				holidays[23] = "天皇誕生日"
 
+		for d, holiday_name in {key: val for key, val in holidays.items()}.items():
+			if calendar.weekday(year, month, d) == 6:
+				while 5 <= calendar.weekday(year, month, d) or d in holidays:
+					d += 1
+				holidays[d] = "{0} 振替休日".format(holiday_name)
+				
 		return holidays
 
 	def getNthWeekday(self, year, month, nth, weekday):
@@ -122,4 +128,3 @@ class Holiday:
 					return i + 1
 			first_weekday += 1
 		return 0
-
