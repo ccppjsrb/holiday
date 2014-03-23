@@ -89,12 +89,12 @@ class Holiday:
 				if year <= 2074:
 					holidays[23] = "秋分の日"
 				elif year <= 2098:
-					holidays[22] = "春分の日"
+					holidays[22] = "秋分の日"
 			elif year % 4 == 3:
 				if year <= 1979:
-					holidays[24] = "春分の日"
+					holidays[24] = "秋分の日"
 				elif year <= 2099:
-					holidays[23] = "春分の日"
+					holidays[23] = "秋分の日"
 
 		elif month == 10:
 			if 1966 <= year <= 1999:
