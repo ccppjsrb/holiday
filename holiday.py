@@ -123,5 +123,3 @@ class Holiday:
 			first_weekday += 1
 		return 0
 
-h = Holiday()
-print(h.getHolidays(1999, 3))
