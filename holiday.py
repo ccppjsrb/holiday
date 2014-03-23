@@ -6,7 +6,7 @@ class Holiday:
 
 	def getHolidays(self, year, month):
 		holidays = {}
-		if year < 1948 or year == 1948 and month < 7:
+		if year < 1948 or year == 1948 and month < 7 or 2100 <= year:
 			return holidays
 
 		if month == 1:
