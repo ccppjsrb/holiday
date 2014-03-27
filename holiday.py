@@ -144,3 +144,7 @@ class Holiday:
 					return i + 1
 			first_weekday += 1
 		return 0
+	
+	def getHolidayName(self, year, month, day):
+		return self.getHolidays(year, month).get(day, None)
+
